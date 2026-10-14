@@ -1,8 +1,13 @@
-# mp_neuron
+# mp-neuron
 
 A small C implementation of the McCulloch-Pitts (M-P) neuron, the first
 mathematical model of a biological neuron (1943), written as a learning
 project.
+
+![McCulloch-Pitts neuron structure: boolean inputs feed an aggregation function g that sums them, then a decision function f compares the sum to a threshold theta to produce the output y](docs/mp_neuron.svg)
+
+*Structure of the M-P neuron: inputs are summed by `g`, and `f` fires when the
+sum reaches the threshold `theta`. An active inhibitory input forces `y` to 0.*
 
 The neuron sums boolean inputs and fires (outputs 1) when the sum reaches a
 hand-set threshold `theta`. An active **inhibitory** input vetoes the output
@@ -43,6 +48,7 @@ make CFLAGS="-std=c11 -Wall -Wextra -O2"
 include/mp_neuron.h   public API (struct mp_neuron, create/destroy/fire, gates)
 src/mp_neuron.c       implementation
 src/main.c            interactive program
+docs/mp_neuron.svg    neuron structure figure
 Makefile              build rules
 ```
 

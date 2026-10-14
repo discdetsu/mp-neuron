@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 350" width="760" height="350" role="img" aria-labelledby="t d">
+  <title id="t">McCulloch-Pitts neuron structure</title>
+  <desc id="d">Boolean inputs, excitatory and inhibitory, feed an aggregation function g that sums them. A decision function f compares the sum to a threshold theta and produces a boolean output y.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f6feb"/>
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <circle cx="5" cy="5" r="4.5" fill="#cf222e"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="758" height="348" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#1f2328" text-anchor="middle">
+    <!-- inputs -->
+    <circle cx="70" cy="80" r="20" fill="#f6f8fa" stroke="#1f6feb" stroke-width="2"/>
+    <text x="70" y="85">x1</text>
+    <circle cx="70" cy="170" r="20" fill="#f6f8fa" stroke="#1f6feb" stroke-width="2"/>
+    <text x="70" y="175">x2</text>
+    <circle cx="70" cy="260" r="20" fill="#f6f8fa" stroke="#cf222e" stroke-width="2"/>
+    <text x="70" y="265">x3</text>
+
+    <!-- connections: excitatory use arrows, inhibitory ends with a dot -->
+    <line x1="90" y1="82" x2="256" y2="146" stroke="#1f6feb" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="90" y1="170" x2="256" y2="170" stroke="#1f6feb" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="90" y1="258" x2="254" y2="196" stroke="#cf222e" stroke-width="2" marker-end="url(#dot)"/>
+
+    <!-- aggregation g -->
+    <rect x="260" y="110" width="130" height="120" rx="8" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+    <text x="325" y="150" font-weight="bold">g(x)</text>
+    <text x="325" y="178">sum of inputs</text>
+    <text x="325" y="202">&#931; xi</text>
+    <text x="325" y="252" fill="#57606a" font-size="13">aggregation</text>
+
+    <!-- g to f -->
+    <line x1="390" y1="170" x2="446" y2="170" stroke="#57606a" stroke-width="2" marker-end="url(#arrow-dark)"/>
+
+    <!-- decision f -->
+    <rect x="450" y="110" width="150" height="120" rx="8" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+    <text x="525" y="150" font-weight="bold">f(g)</text>
+    <text x="525" y="178">1 if g(x) &#8805; &#952;</text>
+    <text x="525" y="202">0 otherwise</text>
+    <text x="525" y="252" fill="#57606a" font-size="13">decision</text>
+
+    <!-- threshold -->
+    <text x="525" y="40">threshold &#952; (hand-set)</text>
+    <line x1="525" y1="50" x2="525" y2="106" stroke="#57606a" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow-dark)"/>
+
+    <!-- output -->
+    <line x1="600" y1="170" x2="676" y2="170" stroke="#57606a" stroke-width="2" marker-end="url(#arrow-dark)"/>
+    <circle cx="700" cy="170" r="20" fill="#f6f8fa" stroke="#57606a" stroke-width="2"/>
+    <text x="700" y="175">y</text>
+    <text x="700" y="212" fill="#57606a" font-size="13">0 or 1</text>
+
+    <!-- legend -->
+    <line x1="40" y1="318" x2="84" y2="318" stroke="#1f6feb" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="94" y="323" text-anchor="start" font-size="14">excitatory input</text>
+    <line x1="260" y1="318" x2="300" y2="318" stroke="#cf222e" stroke-width="2" marker-end="url(#dot)"/>
+    <text x="314" y="323" text-anchor="start" font-size="14">inhibitory input: if it is 1, y is always 0</text>
+  </g>
+</svg>
