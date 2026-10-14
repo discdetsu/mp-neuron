@@ -1,0 +1,15 @@
+# Approximates Linux kernel style
+BasedOnStyle: LLVM
+UseTab: Always
+IndentWidth: 8
+TabWidth: 8
+ContinuationIndentWidth: 8
+ColumnLimit: 80
+BreakBeforeBraces: Linux
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+IndentCaseLabels: false
+AlignAfterOpenBracket: Align
+PointerAlignment: Right
+SpaceBeforeParens: ControlStatements
